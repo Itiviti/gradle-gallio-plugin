@@ -9,6 +9,6 @@ description 'gradle-ikvm-plugin is a Gradle plugin for IKVM artifact compilation
 dependencies {
     compile fileTree( dir: "${gradle.gradleHomeDir}/lib/plugins", include: "gradle-plugins-*.jar")
     compile getTools()
-    compile 'com.ullink.gradle:gradle-repositories-plugin:1.2-SNAPSHOT'
+    compile 'com.ullink.gradle:gradle-repositories-plugin:1.2'
     testCompile 'junit:junit:4.8.2'
 }
