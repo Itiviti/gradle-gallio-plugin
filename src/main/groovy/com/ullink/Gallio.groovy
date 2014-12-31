@@ -23,6 +23,7 @@ class Gallio extends ConventionTask {
     boolean force32bits
     def coverageTool
     def verbosity
+    def filter
 
     Gallio() {
         inputs.files {
@@ -133,7 +134,9 @@ class Gallio extends ConventionTask {
         if (verb) {
             commandLineArgs += '/v:'+verb
         }
-
+        if (filter) {
+            commandLineArgs += "/f:${filter}"
+        }
         getTestAssemblies().each {
             commandLineArgs += project.file(it)
         }
